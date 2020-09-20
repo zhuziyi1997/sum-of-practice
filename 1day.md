@@ -133,3 +133,16 @@ print(couter.most_common(3))
   ```
   
   13.动态规划
+  子列表中元素和的最大值
+  ```Python
+  def main():
+    items = list(map(input().split()))
+    overall = partitial = items[0]
+    for i in range(1,len(items)):
+      partitial = max(partitial, partitial+items[i])
+      overall = max(overall, partitial)
+    print(overall)
+
+  if __name__ == '__main__':
+    main()
+  ```
